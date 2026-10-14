@@ -1,0 +1,179 @@
+---
+title: Home
+layout: landing
+nav_order: 1
+permalink: /
+---
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">For the Islamic Education Unit's basic schools</p>
+      <h1>Every score and every register, <em>on record.</em></h1>
+      <p class="lead">Teachers record scores and attendance. Heads approve what changes. Directors see every school in their region. From Primary 1 to JHS 3, each step is kept, signed off and searchable.</p>
+      <div class="hero-cta">
+        <a class="btn btn-navy" href="{{ '/roles.html' | relative_url }}">Read the docs</a>
+        <a class="link-arrow" href="{{ '/grading.html' | relative_url }}">How grading works</a>
+      </div>
+      <p class="private-note">The source code is private. These pages explain how the system works.</p>
+    </div>
+
+    <div class="report-wrap" id="report">
+      <div class="report" role="img" aria-label="Example report sheet for JHS 2, term 2: four subjects with class work, test and exam marks, totals, grades and positions. The results move from open to collating, submitted, approved and locked, and an approval stamp appears.">
+        <div class="rp-head" aria-hidden="true">
+          <div>
+            <small>Islamic Education Unit</small>
+            <b>JHS 2 · Term 2 results</b>
+          </div>
+          <span class="rp-state">Open</span>
+        </div>
+        <ol class="rp-steps" aria-hidden="true">
+          <li data-s="0">Open</li><li data-s="1">Collating</li><li data-s="2">Submitted</li><li data-s="3">Approved</li><li data-s="4">Locked</li>
+        </ol>
+        <table class="rp-table" aria-hidden="true">
+          <thead><tr><th>Subject</th><th>Class work<br><small>30</small></th><th>Tests<br><small>20</small></th><th>Exam<br><small>50</small></th><th>Total</th><th>Grade</th><th>Pos.</th></tr></thead>
+          <tbody>
+            <tr><td>Mathematics</td><td>26</td><td>17</td><td>41</td><td class="c-total" data-v="84">–</td><td class="c-grade" data-v="A">–</td><td class="c-pos" data-v="2nd">–</td></tr>
+            <tr><td>English</td><td>24</td><td>16</td><td>38</td><td class="c-total" data-v="78">–</td><td class="c-grade" data-v="B">–</td><td class="c-pos" data-v="5th">–</td></tr>
+            <tr><td>Integrated Science</td><td>27</td><td>18</td><td>44</td><td class="c-total" data-v="89">–</td><td class="c-grade" data-v="A">–</td><td class="c-pos" data-v="1st">–</td></tr>
+            <tr><td>Arabic</td><td>25</td><td>15</td><td>40</td><td class="c-total" data-v="80">–</td><td class="c-grade" data-v="A">–</td><td class="c-pos" data-v="3rd">–</td></tr>
+          </tbody>
+        </table>
+        <div class="rp-foot" aria-hidden="true">
+          <span>Form teacher</span><span class="sig">— signed</span>
+          <span>Head of school</span><span class="sig sig-head">—</span>
+        </div>
+        <div class="stamp" aria-hidden="true"><span>Approved</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap band-inner">
+    <div><strong>5</strong><span>roles, from class teacher to national administrator</span></div>
+    <div><strong>9</strong><span>grade levels, Primary 1 to JHS 3</span></div>
+    <div><strong>8</strong><span>kinds of approval request</span></div>
+    <div><strong>164</strong><span>automated backend tests</span></div>
+  </div>
+</section>
+
+<section class="section" id="scope">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">Who sees what</p>
+      <h2>Access follows the way the Unit is organised</h2>
+      <p>Pick a role to see how much of the country it can see and change.</p>
+    </header>
+    <div class="scope">
+      <div class="scope-tabs" role="tablist" aria-label="Roles">
+        <button role="tab" aria-selected="false" data-role="admin">System administrator</button>
+        <button role="tab" aria-selected="true" data-role="director">Director</button>
+        <button role="tab" aria-selected="false" data-role="head">Head of school</button>
+        <button role="tab" aria-selected="false" data-role="teacher">Teacher</button>
+      </div>
+      <div class="scope-body">
+        <div class="tree" data-role="director" aria-hidden="true">
+          <div class="node n-country">The Unit<small>all regions</small></div>
+          <div class="branch b-regions">
+            <div class="node n-region n-mine">Region A<small>region</small></div>
+            <div class="node n-region">Region B<small>region</small></div>
+          </div>
+          <div class="branch b-districts">
+            <div class="node n-district n-mine">District 1<small>district</small></div>
+            <div class="node n-district n-mine">District 2<small>district</small></div>
+            <div class="node n-district">District 3<small>district</small></div>
+          </div>
+          <div class="branch b-schools">
+            <div class="node n-school n-mine n-myschool">School A</div>
+            <div class="node n-school n-mine">School B</div>
+            <div class="node n-school n-mine">School C</div>
+            <div class="node n-school">School D</div>
+          </div>
+          <div class="branch b-classes">
+            <div class="node n-class n-mine n-myschool n-myclass">JHS 2</div>
+            <div class="node n-class n-mine n-myschool">P6</div>
+            <div class="node n-class n-mine">JHS 1</div>
+            <div class="node n-class">P3</div>
+          </div>
+        </div>
+        <div class="scope-text">
+          <div class="st" data-role="admin"><h3>System administrator</h3><p>Sees every region and school in the country. Adds directors and assigns each one to a region.</p></div>
+          <div class="st on" data-role="director"><h3>Director</h3><p>Everything a director does applies to the schools in their own region: schools broken down by district, staff, students, approvals, reports and the audit log.</p></div>
+          <div class="st" data-role="head"><h3>Head of school</h3><p>Works inside one school: staff, classes and students, and approving teachers' requests and results. Assistant heads share the work.</p></div>
+          <div class="st" data-role="teacher"><h3>Teacher</h3><p>Sees only their own classes and subjects. A form teacher owns a class and sees all its marks; a subject teacher marks only what they teach.</p></div>
+          <a class="link-arrow" href="{{ '/roles.html' | relative_url }}">Read about roles</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-ruled" id="requests">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">Requests, not edits</p>
+      <h2>Nothing important changes without a signature</h2>
+      <p>Teachers don't edit student records directly. They raise a request; a head approves or rejects it, and every step stays in the request's history and the audit log.</p>
+    </header>
+    <div class="tickets">
+      <article class="ticket"><span class="t-type">Add student</span><span class="t-who">Teacher → Head</span><span class="t-status s-ok">Approved</span></article>
+      <article class="ticket"><span class="t-type">Edit student</span><span class="t-who">Teacher → Head</span><span class="t-status s-wait">Pending</span></article>
+      <article class="ticket"><span class="t-type">Promote student</span><span class="t-who">Teacher → Head</span><span class="t-status s-ok">Approved</span></article>
+      <article class="ticket"><span class="t-type">Bulk promotion</span><span class="t-who">Whole class, end of year</span><span class="t-status s-wait">Pending</span></article>
+      <article class="ticket"><span class="t-type">Transfer student</span><span class="t-who">To another school</span><span class="t-status s-no">Rejected</span></article>
+      <article class="ticket"><span class="t-type">Change grading scheme</span><span class="t-who">New version, needs approval</span><span class="t-status s-ok">Approved</span></article>
+      <article class="ticket"><span class="t-type">BECE clearance</span><span class="t-who">JHS 3 candidates</span><span class="t-status s-wait">Pending</span></article>
+      <article class="ticket"><span class="t-type">Leave request</span><span class="t-who">Staff leave</span><span class="t-status s-ok">Approved</span></article>
+    </div>
+    <p class="after"><a class="link-arrow" href="{{ '/approvals.html' | relative_url }}">How approvals and the audit log work</a></p>
+  </div>
+</section>
+
+<section class="section" id="year">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">The school year</p>
+      <h2>Built around how a year actually runs</h2>
+    </header>
+    <ol class="year">
+      <li><span class="y-when">Start of year</span><h3>Set up</h3><p>Academic year and terms, classes for each grade level, a form teacher for each class and a teacher for each subject.</p></li>
+      <li><span class="y-when">Every day</span><h3>Registers</h3><p>Teachers take each class's register in one go. Staff attendance is recorded too.</p></li>
+      <li><span class="y-when">Through the term</span><h3>Assessments</h3><p>Class work, tests and exams are scored against the class's approved grading scheme.</p></li>
+      <li><span class="y-when">End of term</span><h3>Results</h3><p>Totals, grades and positions are computed, submitted to the head, approved and locked.</p></li>
+      <li><span class="y-when">End of year</span><h3>Promotion</h3><p>Students move up under the school's promotion policy, including its minimum attendance, through approval requests.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-ruled">
+  <div class="wrap ledger">
+    <div class="ledger-copy">
+      <p class="kicker">Built with</p>
+      <h2>A web app for every role</h2>
+      <p>A Django REST back end and a Next.js front end, with a separate workspace for teachers, heads and directors, and an automated test suite behind the grading, attendance and approval rules.</p>
+    </div>
+    <dl class="ledger-list">
+      <div><dt>Back end</dt><dd>Django REST Framework</dd></div>
+      <div><dt>Front end</dt><dd>Next.js and TypeScript</dd></div>
+      <div><dt>Interface</dt><dd>Tailwind CSS</dd></div>
+      <div><dt>Dashboards</dt><dd>Recharts</dd></div>
+      <div><dt>Workspaces</dt><dd>Teacher · Head · Director</dd></div>
+      <div><dt>Automated tests</dt><dd>164</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="letter">
+      <p class="kicker">A note</p>
+      <h2>Want to see it running?</h2>
+      <p>The code is private, but I'm happy to walk you through the system or give a live demo.</p>
+      <div class="hero-cta">
+        <a class="btn btn-navy" href="mailto:alwaasiua@gmail.com">Ask for a demo</a>
+        <a class="link-arrow" href="https://farad56.github.io/">About me</a>
+      </div>
+      <p class="letter-sig">— Al-Waasiu</p>
+    </div>
+  </div>
+</section>

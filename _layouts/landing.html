@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IEU Performance and Attendance: every score and register, on record</title>
+  <meta name="description" content="A school management platform for the Islamic Education Unit: teachers record scores and attendance, heads approve, and directors see their whole region.">
+  <meta property="og:title" content="IEU Performance and Attendance">
+  <meta property="og:description" content="Grading, attendance, approvals and audit for primary and junior high schools.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1e3a8a">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/landing.css' | relative_url }}">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("mlr-theme"); } catch (e) {}
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="IEU Performance and Attendance home">
+        <img src="{{ '/assets/images/favicon.svg' | relative_url }}" alt="" width="30" height="30">
+        <span>IEU <i>Performance &amp; Attendance</i></span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#report">Results</a>
+        <a href="#scope">Who sees what</a>
+        <a href="#requests">Requests</a>
+        <a href="#year">The school year</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark mode">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <a class="btn btn-navy btn-sm" href="{{ '/roles.html' | relative_url }}">Read the docs</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+{{ content }}
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p class="footer-sig">Designed and built by <a href="https://farad56.github.io/">Al-Waasiu Abubakari</a>. The application's code is private.</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="{{ '/roles.html' | relative_url }}">Roles</a>
+        <a href="{{ '/academic-structure.html' | relative_url }}">Academic structure</a>
+        <a href="{{ '/grading.html' | relative_url }}">Grading</a>
+        <a href="{{ '/attendance.html' | relative_url }}">Attendance</a>
+        <a href="{{ '/approvals.html' | relative_url }}">Approvals</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/landing.js' | relative_url }}" defer></script>
+</body>
+</html>

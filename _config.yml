@@ -1,0 +1,29 @@
+title: IEU Performance and Attendance
+description: Academic performance and attendance tracking for the Islamic Education Unit's basic schools.
+url: https://farad56.github.io
+baseurl: /IEU-docs
+
+remote_theme: just-the-docs/just-the-docs@v0.12.0
+plugins:
+  - jekyll-remote-theme
+
+color_scheme: runner
+search_enabled: true
+heading_anchors: true
+
+aux_links:
+  "Author":
+    - "https://farad56.github.io/"
+aux_links_new_tab: true
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+mermaid:
+  version: "11.4.1"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
