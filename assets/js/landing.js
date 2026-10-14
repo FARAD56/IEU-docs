@@ -25,6 +25,38 @@
     reveals.forEach(function (el, i) { el.style.transitionDelay = (i % 4) * 70 + "ms"; io.observe(el); });
   }
 
+  /* Glance dashboard */
+  var dash = document.querySelector(".dash");
+  if (dash) {
+    var ring = dash.querySelector(".ring-fg");
+    var barEl = dash.querySelector(".bar i");
+    var counters = dash.querySelectorAll(".count");
+    var animateDash = function () {
+      dash.classList.add("in");
+      if (ring) ring.style.strokeDashoffset = 314 * (1 - parseFloat(ring.getAttribute("data-pct")) / 100);
+      if (barEl) barEl.style.width = barEl.getAttribute("data-w") + "%";
+      counters.forEach(function (el) {
+        var target = parseInt(el.getAttribute("data-count"), 10);
+        if (reduceMotion) { el.textContent = target; return; }
+        var start = performance.now();
+        (function frame(now) {
+          var t = Math.min(1, (now - start) / 1300);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3)));
+          if (t < 1) requestAnimationFrame(frame);
+        })(start);
+      });
+    };
+    if ("IntersectionObserver" in window && !reduceMotion) {
+      counters.forEach(function (el) { el.textContent = "0"; });
+      var dio = new IntersectionObserver(function (e) {
+        if (e[0].isIntersecting) { dio.disconnect(); animateDash(); }
+      }, { threshold: 0.35 });
+      dio.observe(dash);
+    } else {
+      animateDash();
+    }
+  }
+
   /* Who sees what */
   var scopes = {
     admin: ".node",

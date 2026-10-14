@@ -7,12 +7,12 @@ permalink: /
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="kicker">For the Islamic Education Unit's basic schools</p>
+      <p class="kicker kicker-light"><span class="dot" aria-hidden="true"></span>For the Islamic Education Unit's basic schools</p>
       <h1>Every score and every register, <em>on record.</em></h1>
       <p class="lead">Teachers record scores and attendance. Heads approve what changes. Directors see every school in their region. From Primary 1 to JHS 3, each step is kept, signed off and searchable.</p>
       <div class="hero-cta">
-        <a class="btn btn-navy" href="{{ '/roles.html' | relative_url }}">Read the docs</a>
-        <a class="link-arrow" href="{{ '/grading.html' | relative_url }}">How grading works</a>
+        <a class="btn btn-gold" href="{{ '/roles.html' | relative_url }}">Explore the docs</a>
+        <a class="btn btn-ghost-light" href="{{ '/grading.html' | relative_url }}">How grading works</a>
       </div>
       <p class="private-note">The source code is private. These pages explain how the system works.</p>
     </div>
@@ -43,6 +43,49 @@ permalink: /
           <span>Head of school</span><span class="sig sig-head">—</span>
         </div>
         <div class="stamp" aria-hidden="true"><span>Approved</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="glance" aria-label="Example director dashboard">
+  <div class="wrap">
+    <div class="dash" role="img" aria-label="Example director dashboard for one region: 94 percent attendance today, 18 of 24 classes with locked results, 7 approvals waiting, and average scores for five schools.">
+      <div class="dash-top" aria-hidden="true">
+        <div><small>Director dashboard</small><b>Region A · this term</b></div>
+        <span class="dash-tag">Example data</span>
+      </div>
+      <div class="dash-grid" aria-hidden="true">
+        <div class="tile tile-ring">
+          <svg class="ring" viewBox="0 0 120 120"><circle class="ring-bg" cx="60" cy="60" r="50"/><circle class="ring-fg" cx="60" cy="60" r="50" data-pct="94"/></svg>
+          <div class="ring-label"><b class="count" data-count="94">94</b><span>%</span></div>
+          <p>Attendance today</p>
+        </div>
+        <div class="tile">
+          <p class="tile-h">Results locked</p>
+          <div class="big"><b class="count" data-count="18">18</b><span>/ 24 classes</span></div>
+          <div class="bar"><i data-w="75"></i></div>
+          <p class="tile-sub">6 classes still collating</p>
+        </div>
+        <div class="tile">
+          <p class="tile-h">Waiting for approval</p>
+          <div class="big"><b class="count" data-count="7">7</b><span>requests</span></div>
+          <ul class="mini-list">
+            <li><span class="pill p-gold">3</span>Student edits</li>
+            <li><span class="pill p-green">2</span>Promotions</li>
+            <li><span class="pill p-ink">2</span>Leave</li>
+          </ul>
+        </div>
+        <div class="tile tile-bars">
+          <p class="tile-h">Average score by school</p>
+          <div class="bars">
+            <span style="--h:78"><i></i><em>A</em></span>
+            <span style="--h:64"><i></i><em>B</em></span>
+            <span style="--h:86"><i></i><em>C</em></span>
+            <span style="--h:71"><i></i><em>D</em></span>
+            <span style="--h:59"><i></i><em>E</em></span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -163,17 +206,16 @@ permalink: /
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="letter">
-      <p class="kicker">A note</p>
+<section class="cta">
+  <div class="wrap cta-inner">
+    <div>
+      <p class="kicker kicker-light"><span class="dot" aria-hidden="true"></span>Private project</p>
       <h2>Want to see it running?</h2>
       <p>The code is private, but I'm happy to walk you through the system or give a live demo.</p>
-      <div class="hero-cta">
-        <a class="btn btn-navy" href="mailto:alwaasiua@gmail.com">Ask for a demo</a>
-        <a class="link-arrow" href="https://farad56.github.io/">About me</a>
-      </div>
-      <p class="letter-sig">— Al-Waasiu</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-gold" href="mailto:alwaasiua@gmail.com">Ask for a demo</a>
+      <a class="btn btn-ghost-light" href="https://farad56.github.io/">About me</a>
     </div>
   </div>
 </section>
