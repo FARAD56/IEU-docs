@@ -5,7 +5,7 @@ nav_order: 2
 
 # Roles and access
 
-Access follows the way the Unit is organised: the country is divided into regions, each region into districts, and each district holds schools. Everyone sees only the part of that tree they're responsible for.
+Access follows the way the Unit is organized: the country is divided into regions, each region into districts, and each district holds schools. Everyone sees only the part of that tree they're responsible for.
 
 | Role | Scope | What they do |
 |---|---|---|
